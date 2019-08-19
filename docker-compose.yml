@@ -11,8 +11,9 @@ services:
       - ./tmp/db:/var/lib/postgresql/data
   web:
     build: .
+    container_name: APPNAME
     volumes:
-      - /Users/accountmac/projects/rentealo:/usr/src/app
+      - RAILSPATH:/usr/src/app
     ports:
       - "3000:3000"
     depends_on:
